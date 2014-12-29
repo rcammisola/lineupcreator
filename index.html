@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+	<title>Canvas Pitch</title>
+  </head>
+  <body>
+	<section id="lineup-app" class="content">
+		<h1>Indoor line-up creator</h1>
+		<section id="positionForm">
+			<input id="new-player" placeholder="Player name" autofocus />
+			<select id="player-position">
+				<option>--</option>
+			</select>
+			<ul id="player-list"></ul>
+		</section>
+		<section id="pitch">
+			<canvas id="pitchCanvas" width="400" height="500"></canvas>
+			<canvas id="team" width="400" height="500"></canvas>
+		</section>
+	</section>
+
+	<script id="player-template" type="text/x-handlebars-template">
+		{{#this}}
+		<li data-id="{{id}}">
+			<div class="view">
+				<label>{{name}}</label>
+				<button class="destroy"></button>
+			</div>
+			<input class="edit" value="{{title}}">
+		</li>
+		{{/this}}
+	</script>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.addPlayerWidget.js"></script>
+    <script type="text/javascript" src="js/handlebars.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>      
